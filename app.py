@@ -9,7 +9,7 @@ car_data = pd.read_csv('vehicles_us.csv')
 st.header('Análisis Visual de Datos de Vehículos')
 
 # Mostrar imagen de marcas de autos
-car_logo_url = "https://www.nicepng.com/png/full/290-2903528_marcas-de-autos-png-ks-car-logo.png"
+car_logo_url = "https://w7.pngwing.com/pngs/163/703/png-transparent-autonomous-car-vehicle-automotive-industry-automobile-repair-shop-car-branding-text-computer-logo.png"
 st.image(car_logo_url)
 
 # Permitir al usuario elegir la columna para el histograma
