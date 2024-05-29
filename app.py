@@ -10,7 +10,7 @@ st.header('Análisis Visual de Datos de Vehículos')
 
 # Permitir al usuario elegir la columna para el histograma
 st.write("Opciones Avanzadas")
-column_hist = st.selectbox('Elige la columna para el histograma', [
+column_hist = st.selectbox('Elige una columna', [
                            'odometer', 'price', 'days_listed'])
 build_histogram = st.checkbox('Mostrar Histograma')
 if build_histogram:
@@ -26,7 +26,7 @@ options_scatter = {
     'price vs days_listed': ('price', 'days_listed')
 }
 choice_scatter = st.selectbox(
-    'Elige las columnas para el gráfico de dispersión', list(options_scatter.keys()))
+    'Elige la varible a graficar', list(options_scatter.keys()))
 build_scatter = st.checkbox('Mostrar Gráfico de Dispersión')
 if build_scatter:
     x, y = options_scatter[choice_scatter]
@@ -36,7 +36,7 @@ if build_scatter:
 
 # Permitir al usuario elegir la columna para el gráfico de barras
 st.write("Gráficos de Barras")
-column_bar = st.selectbox('Elige la columna para el gráfico de barras', [
+column_bar = st.selectbox('Elige una columna', [
                           'condition', 'fuel', 'transmission', 'type', 'paint_color'])
 build_bar = st.checkbox('Mostrar Gráfico de Barras')
 if build_bar:
@@ -51,7 +51,7 @@ if build_bar:
 
 # Permitir al usuario elegir la columna para el gráfico de torta
 st.write("Gráfico de Torta")
-column_pie = st.selectbox('Elige la columna para el gráfico de torta', [
+column_pie = st.selectbox('Elige una columna', [
                           'condition', 'fuel', 'transmission', 'type'])
 build_pie = st.checkbox('Mostrar Gráfico de Torta')
 if build_pie:
