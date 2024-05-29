@@ -5,6 +5,10 @@ import plotly.express as px
 # Cargar datos desde un archivo CSV
 car_data = pd.read_csv('vehicles_us.csv')
 
+# Mostrar imagen de marcas de autos
+car_logo_url = "https://www.nicepng.com/png/full/290-2903528_marcas-de-autos-png-ks-car-logo.png"
+st.image(car_logo_url, caption='Logos de Marcas de Autos')
+
 # Encabezado de la aplicación
 st.header('Análisis Visual de Datos de Vehículos')
 
