@@ -37,7 +37,7 @@ if build_scatter:
 # Permitir al usuario elegir la columna para el gráfico de barras
 st.write("Gráficos de Barras")
 column_bar = st.selectbox('Elige la columna para el gráfico de barras', [
-                          'condition', 'fuel', 'transmission', 'type'])
+                          'condition', 'fuel', 'transmission', 'type', 'paint_color'])
 build_bar = st.checkbox('Mostrar Gráfico de Barras')
 if build_bar:
     st.write(f'Gráfico de barras para la columna "{column_bar}"')
