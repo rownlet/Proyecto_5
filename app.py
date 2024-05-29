@@ -26,7 +26,7 @@ options_scatter = {
     'price vs days_listed': ('price', 'days_listed')
 }
 choice_scatter = st.selectbox(
-    'Elige la varible a graficar', list(options_scatter.keys()))
+    'Elige una columna', list(options_scatter.keys()))
 build_scatter = st.checkbox('Mostrar Gráfico de Dispersión')
 if build_scatter:
     x, y = options_scatter[choice_scatter]
