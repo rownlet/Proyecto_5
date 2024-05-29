@@ -41,6 +41,8 @@ column_bar = st.selectbox('Elige la columna para el gráfico de barras', [
 build_bar = st.checkbox('Mostrar Gráfico de Barras')
 if build_bar:
     st.write(f'Gráfico de barras para la columna "{column_bar}"')
-    fig_bar = px.bar(car_data, y=column_bar, text_auto=True,
+    count_data = car_data[column_bar].value_counts().reset_index()
+    count_data.columns = [column_bar, 'count']
+    fig_bar = px.bar(count_data, y=column_bar, x='count', text_auto=True,
                      title=f"Distribución de {column_bar}", orientation='h')
     st.plotly_chart(fig_bar, use_container_width=True)
