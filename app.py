@@ -44,7 +44,7 @@ if build_bar:
     count_data = car_data[column_bar].value_counts().reset_index()
     count_data.columns = [column_bar, 'count']
     # Ordenar los datos en orden descendente por 'count'
-    count_data = count_data.sort_values('count', ascending=False)
+    count_data = count_data.sort_values('count', ascending=True)
     fig_bar = px.bar(count_data, y=column_bar, x='count', text_auto=True,
                      title=f"Distribución de {column_bar}", orientation='h')
     st.plotly_chart(fig_bar, use_container_width=True)
