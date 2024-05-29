@@ -48,3 +48,16 @@ if build_bar:
     fig_bar = px.bar(count_data, y=column_bar, x='count', text_auto=True,
                      title=f"Distribución de {column_bar}", orientation='h')
     st.plotly_chart(fig_bar, use_container_width=True)
+
+# Permitir al usuario elegir la columna para el gráfico de torta
+st.write("Gráfico de Torta")
+column_pie = st.selectbox('Elige la columna para el gráfico de torta', [
+                          'condition', 'fuel', 'transmission', 'type'])
+build_pie = st.checkbox('Mostrar Gráfico de Torta')
+if build_pie:
+    st.write(f'Gráfico de torta para la columna "{column_pie}"')
+    pie_data = car_data[column_pie].value_counts().reset_index()
+    pie_data.columns = [column_pie, 'count']
+    fig_pie = px.pie(pie_data, names=column_pie, values='count',
+                     title=f"Distribución de {column_pie}")
+    st.plotly_chart(fig_pie, use_container_width=True)
